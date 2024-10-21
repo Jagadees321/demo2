@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>forms</title>
+    <style>
+        input {
+            background-color: azure;
+            color: aqua;
+            border-color: blue;
+        }
+        
+        #html {
+            border-color: blue;
+        }
+        @media  (min-width:600px) {
+            body{
+                background-color: aqua;
+            }
+        }
+        @media (max-width:599px) {
+            body{
+                background-color: rgb(0, 0, 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <label>first name:<br><input type="text" name="fname" value="jagadeesh" ></label><br>
+    <label>password<br><input type="password" name="fname" value="jagga@123"></label><br>
+    <label>email<br><input type="email" name="fname" value="jagga@gmail.com"></label><br>
+    <label>number<br><input type="number" name="fname" value="123"></label><br>
+    <label>checkbox:    <input type="checkbox"  name="fname" value="jagga@123"> <input type="checkbox"  name="fname" value="jagga@123"></label>
+    <br>
+    <label>radio<br>no<input type="radio" name="fname" value="">yes</label><br>
+    <label>button<br><input type="button" type="color" name="fname" value="jagga"></label><br>
+    <label>file<br><input type="file" name="fname" value="jagga@gmail.com"></label><br>
+    <label>images<br><input type="image" name="fname" value="pic.jpg"></label><br>
+    <label>submit<br><input type="submit" name="fname" value="submit"></label><br>
+    <form>
+        <h1>radio buttons</h1>
+        <input type="radio" id="html" name="fav lan" value="html"><label for="html">Html</label><br>
+        <input type="radio" id="css" name="fav lan" value="css"><label for="html">Css</label><br>
+        <input type="radio" id="javascript" name="fav lan" value="html"><label for="javascript">Javascript</label><br>
+    </form>
+    <form>
+        <h1>check box</h1>
+        <input type="checkbox" id="html" name="fav lan" value="html"><label for="html">Html</label><br>
+        <input type="checkbox" id="css" name="fav lan" value="css"><label for="html">Css</label><br>
+        <input type="checkbox" id="javascript" name="fav lan" value="html"><label for="javascript">Javascript</label><br>
+    </form>
+</body>
+
+</html>

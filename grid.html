@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <style>
+        .item {
+            background-color: aqua;
+            border: 2px solid blue;
+            /* margin: 50px; */
+            /* width: 100px;
+            height: 100px; */
+        }
+        
+        .container {
+            display: grid;
+            /* height: 600px; */
+            /* grid-template-columns: 200px 300px 150px; */
+            /* grid-template-columns: auto auto auto; */
+            background-color: rgba(64, 9, 9, 0.445);
+            /* grid-template-rows: 100px 100px; */
+            /* gap: 20px 30px; */
+        }
+        
+        .item:hover {
+            box-shadow: 0 15px 25px rgba(0, 255, 255, 0.568);
+        }
+        
+        .item1 {
+            grid-column: 1/span 4;
+        }
+        
+        .item2 {
+            grid-row: 2/span 3;
+        }
+        
+        .item3 {
+            grid-area: 2/span 1;
+        }
+        
+        .item4 {
+            grid-area: 2/span 1;
+        }
+        
+        .item5 {
+            grid-row: 2/span 2;
+        }
+        
+        .item6 {
+            grid-row: 3/span 1;
+        }
+        
+        .item7 {
+            grid-row: 3/span 1;
+        }
+        
+        .item8 {
+            grid-area: 4/span 1;
+        }
+        
+        .item9 {
+            grid-area: 4/span 1;
+        }
+        
+        .item10 {
+            grid-area: 4/span 1;
+        }
+        
+        .item11 {
+            grid-area: 5/span 4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item1">Header</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+        <div class="item item6">6</div>
+        <div class="item item7">7</div>
+        <div class="item item8">8</div>
+        <div class="item item9">9</div>
+        <div class="item item10">10</div>
+        <div class="item item11">11</div>
+
+    </div>
+
+</body>
+
+</html>

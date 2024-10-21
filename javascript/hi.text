@@ -1,0 +1,16 @@
+ 1.push ==> 2.unshift
+ 3.pop  ==>  4.shift
+ 5. concat
+ 6. join
+ 7.slice//
+ 8.splice//
+ 9. indexOf
+ 10.lastIndexOf
+ 11. includes
+ 12. sort
+ 13. reverse
+
+ //importent
+ 14.map
+ 15.reduce
+ 16.filter

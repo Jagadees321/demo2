@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>calucator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style type="text/css">
+        button {
+            border-radius: 50%;
+            padding: 20px;
+            margin: 10px;
+            display: table-cell;
+            width: 58.03px;
+            background-color: black;
+            color: aliceblue;
+            text-size-adjust: 9px;
+            height: 59.2px;
+            box-shadow: 0 15px 25px rgb(1, 48, 60);
+        }
+        
+        button:hover {
+            color: black;
+            background-color: #2846B6;
+            align-content: center;
+            box-shadow: black;
+            box-shadow: 0 15px 25px rgba(255, 0, 0, 1);
+        }
+        
+        .a {
+            width: 325px;
+            height: 475px;
+            border: 2px solid cyan;
+            border-radius: 5px;
+            margin-left: 600px;
+            margin-top: 380px;
+            transform: translate(-50%, -55%);
+            box-shadow: 0 15px 25px rgba(0, 255, 255, 0.568);
+            padding: 20px;
+        }
+        
+        .b {
+            width: 315px;
+            height: 75px;
+            background-color: rgb(17, 70, 88);
+            border: 2px double darkblue;
+            border-radius: 5px;
+            margin-left: 3px;
+            margin-top: 2px;
+            box-shadow: 0 15px 25px rgb(16, 121, 227);
+            font-size: 40px;
+            color: rgb(207, 192, 192);
+            text-align: right;
+        }
+        
+        .b:hover {
+            background-color: cyan;
+            box-shadow: 0 15px 25px rgb(13, 224, 77);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="a">
+        <input type="text" class="b" id="input">
+        <div>
+            <button type="round" style="round" class="ac">C </button>
+            <button type="round" value="round" class="DEL">% </button>
+            <button type="round" name="round" style="align-content:center;">DEL</button>
+            <button type="round" formtarget="round" class="operators">/</button>
+        </div>
+        <div>
+            <button type="round" style="round">7</button>
+            <button type="round" value="round">8</button>
+            <button type="round" name="round">9</button>
+            <button type="round" formtarget="round" class="operators">*</button>
+        </div>
+
+        <div>
+            <button type="round" style="round">4</button>
+            <button type="round" value="round">5</button>
+            <button type="round" name="round">6</button>
+            <button type="round" formtarget="round" class="operators">-</button>
+        </div>
+        <div>
+            <button type="round" style="round">1</button>
+            <button type="round" value="round">2</button>
+            <button type="round" name="round">3</button>
+            <button type="round" formtarget="round" class="operators">+</button>
+        </div>
+        <div>
+            <button type="round" style="round">00</button>
+            <button type="round" value="round">0</button>
+            <button type="round" name="round">.</button>
+            <button type="round" formtarget="round" class="equalbtn">=</button>
+        </div>
+
+    </div>
+    <script>
+        // let inputBox = document.getElementById("inputBox1")
+        // let buttons = document.querySelectorAll("button")
+        // let str = ""
+        // buttons.forEach(e => {
+        //     e.addEventListener("click", (event) => {
+        //         let x = event.target.innerHTML
+        //         if (x === "=") {
+        //             let res = eval(str)
+        //             inputBox.value = res
+        //         } else if (x === "AC") {
+        //             str = "";
+        //             inputBox.value = str;
+        //         } else if (x === "DEL") {
+        //             let y = str.split("")
+        //                 // console.log(y);
+        //             y.pop()
+        //             str = y.join("")
+        //                 // console.log(str);
+        //             inputBox.value = str;
+        //         } else {
+        //             str = str + x;
+        //             inputBox.value = str;
+        //         }
+        //     })
+        //})
+        let inputBox = document.getElementById("input")
+        let buttons = document.querySelectorAll("button")
+        let str = ""
+        let arr = Array.from(buttons);
+        arr.forEach(button => {
+            button.addEventListener('click', (e) => {
+                if (e.target.innerHTML === '=') {
+                    str = eval(str)
+                    console.log(str);
+                    inputBox.value = str
+                } else if (e.target.innerHTML == 'C') {
+                    str = ""
+                    inputBox.value = str
+                } else if (e.target.innerHTML === 'DEL') {
+                    str = str.substr(0, str.length - 1)
+                    inputBox.value = str
+                } else {
+
+                    str += e.target.innerHTML;
+                    inputBox.value = str
+                }
+            })
+        })
+    </script>
+
+</body>
+
+</html>

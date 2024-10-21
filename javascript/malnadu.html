@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malnadu College of Engineering</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('m.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: blur(5px); 
+           z-index: -1;
+            transition: filter 0.3s ease; 
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .content {
+            background-color: whitesmoke;
+            margin: 20px auto;
+            padding: 20px;
+            margin-top: 150px;
+            border-radius: 8px;
+            max-width: 600px;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 0 10px rgba(18, 218, 204, 0.948);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .content:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .content h1 {
+            color: #004080;
+            font-size: 2.5em;
+            margin-top: 0;
+        }
+
+        .content h2 {
+            color: #004080;
+            font-size: 2em;
+        }
+
+        .info {
+            text-align: left;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="content">
+            <h1>Welcome to Malnadu College of Engineering</h1>
+            <h2>CSE Department</h2>
+            <div class="info">
+                <p>Malnadu College of Engineering offers a comprehensive Computer Science and Engineering program that prepares students for successful careers in the tech industry.</p>
+                <p>Our CSE department is equipped with state-of-the-art facilities, experienced faculty, and a curriculum that emphasizes both theoretical and practical knowledge.</p>
+                <p>We provide opportunities for hands-on learning through projects, internships, and industry collaborations, ensuring our graduates are well-prepared to meet the demands of the ever-evolving technology landscape.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const body=document.querySelector('body');
+        const container = document.getElementById('content');
+        container.addEventListener('mouseenter', () => {
+            document.body.style.filter = 'blur(0px)';
+        });
+        container.addEventListener('mouseleave', () => {
+            body.style.filter = 'blur(5px)';
+        });
+    </script>
+</body>
+</html>
